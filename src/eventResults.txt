@@ -1,0 +1,29 @@
+Before any calculations are done, we must accept at least these three values from DOM:
+
+    From Inputs Dashboard:
+    "Number of Individuals"
+    "Time Horizon" (ALSO TO BE PASSED TO MARKOV FUNCTIONS)
+
+    From Detailed Results:
+    "Total Selected Employees"
+    "% Among Employees w/ Overweight and Obesity classes"
+
+    From Central Data Control:
+    "Include direct costs" (Where is this in the DOM?)
+
+    
+    From Event-Based Analysis:
+    - "Population of Interest" (Event_comorbidity_selection)
+    - "AOM (inc. Wegovy) vs" (Event_comp_selection)
+    - "View By (Events_PMPM)
+
+    This way we should be able to only calculate and build the tables we need to display
+
+    For instance:
+    - if user selects HFpEF or Knee Osteoarthritis, build appropriate table,
+      otherwise build CVD table
+
+We may also need to accept:
+
+    - "View by: Event rate / % Events" (Events_TOG_choice)
+    - "Graph / Chart" (GraphToggleEventsSelected)
