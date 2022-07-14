@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: sans-serif;
+  font-size: 12px;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.number-input__container {
+  background-color: lightgrey;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px #8a8a8a, -1px 1px 2px #8a8a8a;
+  height: 218px;
+  width: 234px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000 /* Allow pad to float over selects, which have z-index 900 */
+;
+}
+/* Place numberpad above display when input */
+/* is positioned near bottom of page */
+.number-input__container.flow-up {
+  flex-direction: column-reverse;
+  transform: translateY(-85%);
+}
+.number-input__container.flow-up.input-hide {
+  flex-direction: column-reverse;
+  transform: translateY(0%);
+}
+.number-input__container input[type="number"],
+.number-input__container input[type="text"] {
+  display: none;
+  /* Hide input element */
+
+}
+.number-input__display {
+  border: none;
+  background-color: transparent;
+  height: 33px;
+  width: 100%;
+  padding: 8px 0px 8px 20px;
+}
+.number-input__numberpad {
+  background-color: #e8e6e6;
+  border-radius: 5px;
+  height: 185px;
+  width: 100%;
+  padding: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Do not use repeat or similar shorthand, Smartrep will not render it correctly */
+  grid-gap: 5px;
+  z-index: 10;
+}
+.number-input__button {
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: 5px;
+  box-shadow: -1px 1px 2px #aaaaaa;
+  font-size: 12px;
+  padding: 4px;
+}
+/* Numberpad button positioning */
+
+/* Important! Do not use grid-area or similar shorthand, Smartrep will not render it correctly */
+.number-input__button.zero {
+    grid-row-start: 4;
+    grid-column-start: 1;
+    grid-row-end: 5;
+    grid-column-end: 2;
+}
+.number-input__button.zero {
+    grid-row-start: 4;
+    grid-column-start: 1;
+    grid-row-end: 5;
+    grid-column-end: 2;
+}
+
+.number-input__button.one {
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-row-end: 4;
+    grid-column-end: 2;
+}
+
+.number-input__button.two {
+    grid-row-start: 3;
+    grid-column-start: 2;
+    grid-row-end: 4;
+    grid-column-end: 3;
+}
+
+.number-input__button.three {
+    grid-row-start: 3;
+    grid-column-start: 3;
+    grid-row-end: 4;
+    grid-column-end: 4;
+}
+
+.number-input__button.four {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-row-end: 3;
+    grid-column-end: 2;
+}
+
+.number-input__button.five {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-row-end: 3;
+    grid-column-end: 3;
+}
+
+.number-input__button.six {
+    grid-row-start: 2;
+    grid-column-start: 3;
+    grid-row-end: 3;
+    grid-column-end: 4;
+}
+
+.number-input__button.seven {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 2;
+    grid-column-end: 2;
+}
+
+.number-input__button.eight {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-row-end: 2;
+    grid-column-end: 3;
+}
+
+.number-input__button.nine {
+    grid-row-start: 1;
+    grid-column-start: 3;
+    grid-row-end: 2;
+    grid-column-end: 4;
+}
+
+.number-input__delete-container {
+    grid-row-start: 4;
+    grid-column-start: 3;
+    grid-row-end: 5;
+    grid-column-end: 4;
+    position: relative;
+}
+.number-input__delete {
+  background: transparent url('../../res/img/delete.png') right bottom no-repeat;
+  background-size: contain;
+  border: none;
+  height: 25px;
+  width: 33px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+/* Styling for when numberpad is hidden */
+.number-input__container.input-hide {
+  box-shadow: none;
+  height: 33px;
+}
+.number-input__container.input-hide .number-input__numberpad {
+  display: none;
+}
+

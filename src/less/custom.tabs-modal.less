@@ -1,0 +1,77 @@
+/**
+ * @file custom.tabs-modal.less
+ *
+ * Specific rules for dynamic tabs for Modal.
+ *
+ * This file will ultimately live at: ./shared/css/
+ * References to shared images should be to: ../../shared/img/
+ * References to slide images should be to: ../../res/img/
+ */
+
+
+/**
+ * data-tab setting for diyamic tab
+ */
+
+  .tab-bg {
+    background-image: url(../../shared/img/bg-grey.png);
+    background-size: 100% 100%;
+    width: 132px;
+    height: 388px;
+    top: 88px;
+    position: absolute;
+  }
+
+  [modal-data-tab],
+  [modal-data-tab]::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 450px;
+    top: 20px;
+  }
+
+  [modal-data-tab]::before {
+    content: '';
+    display: block;
+    position: absolute;
+    pointer-events: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  /* data-tab id setting */
+  [modal-data-tab-id] {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 78px;
+    height: 103px;
+    left: 25px;
+    margin-bottom: 5px;
+  }
+
+  [modal-data-tab-id].selected {
+    width: 92px;
+    left: 11px;
+  }
+
+  [modal-data-tab-id="1"] {
+    top: 117px;
+  }
+
+  [modal-data-tab-id="2"] {
+    top: 227px;
+  }
+
+  [modal-data-tab-id="3"] {
+    top: 337px;
+  }
+
+  /* Adjust tab element's z-index inside tab */
+  [modal-data-tab] [modal-data-tab-id] {
+    z-index: 1;
+  }
+
+  [modal-data-tab]::before {
+    z-index: 2;
+  }

@@ -1,0 +1,380 @@
+/**
+ * @file custom.brand.less
+ *
+ * Specific rules for this brand's IVA.
+ *
+ * This file will ultimately live at: ./shared/css/
+ * References to shared images should be to: ../../shared/img/
+ * References to slide images should be to: ../../res/img/
+ */
+
+
+// This is already applied in top.htm for body.
+// We also add this style to the html element so that external PIs
+// no longer suffer the 1 page lock bug when iScroll elements are enabled
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 1024px;
+  height: 768px;
+  overflow: hidden;
+  position: relative;
+}
+
+
+/**
+ * Header
+ */
+ .header {
+   width: 100%;
+   height: 37.5px;
+   background: #9da0a2;
+   z-index: 998;
+  position: relative;
+ }
+
+/**
+ * Brand logo.
+ */
+.brand-logo {
+  width: 192.5px;
+  right: 0;
+  bottom: 0;
+  background-size: 100%;
+  background-image: url(../../shared/img/global_brand-logo.png);
+  z-index: 1;
+}
+
+/**
+ * Menu bar.
+ */
+.menu {
+  position: absolute;
+  top: 0;
+  width: 1024px;
+  height: 37.5px;
+  background-size: 100% 100%;
+  background-color: #9da0a2;
+  z-index: 1011;
+}
+.menu .modal-button-open {
+  background-image: url(../../shared/img/icon-hamburger-menu.png);
+  background-size: 30px;
+}
+
+.menu .modal-button-open,
+.menu .modal-button-close {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  height: 37.5px;
+  width: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.menu-active .menu .modal-button-open {
+  display: none;
+}
+
+.menu .modal-button-close {
+  display: none;
+}
+
+.menu-active .menu .modal-button-close {
+  display: block;
+  background-size: 22.5px;
+  background-image: url(../../shared/img/icon-close-menu.png);
+}
+
+.menu .flex-button {
+  position: absolute;
+  width: 67px;
+  height: 38px;
+  right: 339px;
+  top: 0;
+  background-size: 100%;
+  background-position: center;
+  background-image: url(../../shared/img/global_btn-flex.png);
+  background-repeat: no-repeat;
+    &.disabled{
+    background-image: url(../../shared/img/global_btn-flex-disabled.png);
+  }
+}
+
+
+/**
+ * Footer
+ */
+.footer {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  width: 100%;
+
+  // DO NOT EDIT THESE VALUES -> Solves ticket:
+  // https://genome.klick.com/tickets/#/details/1204939
+  height: 50px;
+  padding-top: 16px;
+  // ------------------------
+
+  background-color: #9da0a2;
+  background-image: url(../../shared/img/global_footer-links.png);
+  background-size: 1024px;
+  background-position: top left;
+  background-repeat: no-repeat;
+  z-index: 1010;
+  box-sizing: border-box;
+
+  div {
+    position: absolute;
+    top: 0;
+    height: 100%;
+  }
+
+  .references-link {
+    left: 50px;
+    width: 100px;
+  }
+  .study-design-link {
+    left: 150px;
+    width: 120px;
+  }
+  .isi-link {
+    left: 270px;
+    width: 225px;
+  }
+  .pi-link {
+    left: 495px;
+    width: 185px;
+  }
+
+  &.refs-disabled {
+    background-image: url(../../shared/img/global_footer-links-refs-disabled.png);
+    .references-link {
+      display: none;
+    }
+  }
+}
+
+.references-active .footer {
+  background-position: 0px -50px;
+}
+.study-design-active .footer {
+  background-position: 0px -100px;
+}
+.isi-active .footer {
+  background-position: 0px -150px;
+}
+
+
+/*
+  Content
+*/
+
+.img--content {
+  position: absolute;
+  width: 1024px;
+  height: 768px;
+  background-image: url(../../res/img/content.png);
+  background-size: contain;
+  left: 0px;
+  top: 0px;
+}
+.img--isi {
+  background-image: url(../../res/img/isi.png);
+  left: 71.5px;
+  top: 536.5px;
+}
+
+/*
+  Reference Modal
+*/
+
+.modal-visible {
+  background-size: 100%;
+  top: 50px;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+
+.modal-button-close {
+  right: 9px;
+  top: 9px;
+  background-image: url(../../shared/img/icon-close-btn.png);
+  background-size: contain;
+  width: 29px;
+  height: 33.5px;
+}
+
+
+.img--references {
+  position: absolute;
+  top: 39.5px;
+  width: 944px;
+  height: 437px;
+  background-image: url(../../shared/img/references.png);
+}
+
+/*
+  ISI Container / Study Design Container
+*/
+.isi-container,
+.study-design-container,
+.pfv .isi-victoza-container {
+  position: absolute;
+  top: 54px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  width: 964.5px;
+  height: 664.5px;
+  background-size: 100% 100%;
+  background-image: url(../../shared/img/global_modal.png);
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.isi-content,
+.study-design-content {
+  padding-right: 24px;
+  position: absolute;
+  top: 52px;
+  left: 13px;
+  width: 918px;
+  height: 612px;
+  overflow: hidden;
+}
+.img--isi-full {
+  margin: 0 auto;
+  width: 100%;
+  height: 1205px;
+  right: 0;
+  bottom: 0;
+  background-size: 100%;
+  background-image: url(../../shared/img/global_isi_full.png);
+  background-repeat: no-repeat;
+}
+
+.img--study-design-full {
+  margin: 0 auto;
+  width: 916px;
+  height: 2387.5px;
+  right: 0;
+  bottom: 0;
+  background-size: 100%;
+  background-image: url(../../shared/img/global_study_design_full.png);
+  background-repeat: no-repeat;
+}
+
+.isi-container .modal-button-close,
+.study-design-container .modal-button-close {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  top: 8px;
+  right: 8px;
+  z-index: 99999;
+}
+
+.study-design-active, 
+.isi-active {
+  [data-expanding-isi],
+  .img--content {
+    display: none;
+  }
+}
+
+/*
+  Scroll bar styling
+*/
+.iScrollVerticalScrollbar .iScrollIndicator {
+  position: absolute;
+  height: 316px;
+  border-radius: 9px;
+  width: 7px;
+  left: 3px;
+  background: #006373;
+}
+
+.iScrollVerticalScrollbar {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 9999;
+  width: 13px;
+  height: 614px;
+  bottom: 2px;
+  overflow: hidden;
+  background-color: #e1e1e1;
+  border-radius: 9px;
+  padding: 4px 0px;
+}
+
+/**
+ * Modal overlay.
+ * This is defined in boilerplate.modal.less. If we need to change the overlay
+ * colour/opacity that appears when a modal is displayed, change it here.
+ */
+.modal-overlay {
+  background-image: -moz-linear-gradient( 90deg, rgb(255,255,255) 0%, rgb(0,0,0) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(255,255,255) 0%, rgb(0,0,0) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(255,255,255) 0%, rgb(0,0,0) 100%);
+  background-color: transparent;
+}
+
+
+/**
+ * Expanding ISI
+ * Custom styles for the expanding ISI go here.
+ */
+.expandable-isi-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.4;
+  z-index: 1;
+ }
+[data-expanding-isi] {
+  border-radius: 10px;
+  box-sizing: border-box;
+  left: 17px;
+  bottom: 0px;
+  width: 990px;
+  height: 285px;
+  z-index: 100;
+  overflow-y: hidden;
+
+  -webkit-transition: height 0.25s ease-in, background-color 0.25s ease-in;
+}
+[data-expanding-isi] [data-expandable-content] {
+  background-image: url(../../res/img/slide-isi.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 2;
+}
+[data-expanding-isi] [data-toggle-expand-isi] {
+  background-image: url(../../shared/img/btn-expand-isi.png);
+  background-position: center;
+  background-size: 55.5px 7.5px;
+  background-repeat: no-repeat;
+  right: 0px;
+  top: -3.25px;
+  width: 90px;
+  height: 50px;
+  z-index: 101;
+}
+[data-expanding-isi].is-expanded [data-toggle-expand-isi] {
+  background-image: url(../../shared/img/btn-collapse-isi.png);
+  background-position: center;
+  background-size: 71.5px 8px;
+  background-repeat: no-repeat;
+  right: 3.75px;
+  top: -3.25px;
+  width: 100px;
+  height: 50px;
+}

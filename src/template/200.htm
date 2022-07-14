@@ -1,0 +1,198 @@
+<style>
+
+  .img--content {
+    height: 768px;
+  }
+  
+  .img--references {
+    width: 807.5px;
+    height: 589px;
+    background-repeat:no-repeat;
+  }
+  
+  .img--abbreviation {
+    width: 580px;
+    height: 115px;
+    background-repeat:no-repeat;
+  }
+  
+  
+  /* modal triggers */
+  
+  [data-modal-target] {
+    width: 131px;
+    height: 50px;
+  }
+
+  [data-modal-target=".modal-1-physiology"] {
+    top: 340px;
+    left: 89px;
+  }
+  
+  [data-modal-target=".modal-2-willpower"] {
+	top: 450px;
+    left: 238px;
+  }
+  
+  [data-modal-target=".modal-3-conditions"] {
+    top: 341px;
+    left: 387px;
+  }
+  
+  [data-modal-target=".modal-4-medications"] {
+	top: 451px;
+    left: 537px;
+  }
+  
+  [data-modal-target=".modal-5-sdoh"] {
+    top: 339px;
+    left: 686px;
+  }
+  
+  [data-modal-target=".modal-6-behaviour"] {
+    top: 451px;
+    left: 842px;
+  }
+  
+  /* end modal triggers */
+
+
+  /* popup modal styles */
+  
+  .content-modal {
+	transform: none;
+    -webkit-transform: none;
+  }
+  
+  
+  .modal-1-physiology {
+	background-image: url(res/img/modal-1.png);
+	width: 366.5px;
+	height: 320px;
+    top: 342px;
+    left: 90px;
+	background-repeat:no-repeat;
+  }
+  .modal-1-physiology .modal-button-close {
+	right: 0px;
+	top: 67px;
+  }
+  
+  .modal-2-willpower {
+	background-image: url(res/img/modal-2.png);
+	width: 281px;
+	height: 232.5px;
+    top: 265px;
+    left: 241px;
+	background-repeat:no-repeat;
+  }
+  .modal-2-willpower .modal-button-close {
+	right: 0px;
+	top: 8px;
+  }
+  
+  .modal-3-conditions {
+	background-image: url(res/img/modal-3.png);
+	width: 288px;
+	height: 191.5px;
+	top: 343px;
+    left: 390px;
+	background-repeat:no-repeat;
+  }
+  .modal-3-conditions .modal-button-close {
+	right: 0px;
+	top: 63px;
+  }
+  
+  .modal-4-medications {
+	background-image: url(res/img/modal-4.png);
+	width: 246.5px;
+	height: 174.5px;
+	top: 323px;
+    left: 424px;
+	background-repeat:no-repeat;
+  }
+  .modal-4-medications .modal-button-close {
+	right: 0px;
+	top: 0px;
+  }
+  
+  .modal-5-sdoh {
+	background-image: url(res/img/modal-5.png);
+	width: 290.5px;
+	height: 235px;
+    top: 343px;
+    left: 671px;
+	background-repeat:no-repeat;
+  }
+  .modal-5-sdoh .modal-button-close {
+	right: 0px;
+	top: 67px;
+  }
+
+  .modal-6-behaviour {
+	background-image: url(res/img/modal-6.png);
+	width: 317.5px;
+	height: 178.5px;
+    top: 335px;
+    left: 669px;
+	background-repeat:no-repeat;
+  }
+  .modal-6-behaviour .modal-button-close {
+	right: 0px;
+	top: 0px;
+  }
+  
+
+  
+  
+  
+</style>
+
+
+<div class="img--content sprite layer"></div>
+
+
+<!-- Modal Triggers -->
+<a data-modal-trigger-open data-modal-target=".modal-1-physiology" class="tabs-modal-trigger one disable-swipe" data-button-name="Modal - Physiology"></a>
+<a data-modal-trigger-open data-modal-target=".modal-2-willpower" class="tabs-modal-trigger two disable-swipe" data-button-name="Modal - Willpower and Dieting"></a>
+<a data-modal-trigger-open data-modal-target=".modal-3-conditions" class="tabs-modal-trigger three disable-swipe" data-button-name="Modal - Medical Conditions"></a>
+<a data-modal-trigger-open data-modal-target=".modal-4-medications" class="tabs-modal-trigger four disable-swipe" data-button-name="Modal - Medications"></a>
+<a data-modal-trigger-open data-modal-target=".modal-5-sdoh" class="tabs-modal-trigger five disable-swipe" data-button-name="Modal - SDOH"></a>
+<a data-modal-trigger-open data-modal-target=".modal-6-behaviour" class="tabs-modal-trigger six disable-swipe" data-button-name="Modal - Behaviour & Lifestyle"></a>
+
+
+
+
+
+<!-- Modal Containers -->
+
+<div class="modal-1-physiology content-modal modal" data-modal-name="Physiology">
+	<a class="modal-button-close" data-modal-trigger-close></a>
+</div>
+
+<div class="modal-2-willpower content-modal modal" data-modal-name="Willpower and Dieting">
+	<a class="modal-button-close" data-modal-trigger-close></a>
+</div>
+
+<div class="modal-3-conditions content-modal modal" data-modal-name="Medical Conditions">
+	<a class="modal-button-close" data-modal-trigger-close></a>
+</div>
+
+<div class="modal-4-medications content-modal modal" data-modal-name="Medications">
+	<a class="modal-button-close" data-modal-trigger-close></a>
+</div>
+
+<div class="modal-5-sdoh content-modal modal" data-modal-name="SDOH">
+	<a class="modal-button-close" data-modal-trigger-close></a>
+</div>
+
+<div class="modal-6-behaviour content-modal modal" data-modal-name="Behaviour & Lifestyle">
+	<a class="modal-button-close" data-modal-trigger-close></a>
+</div>
+
+
+
+
+<!-- Mask for blocking content reveal in case force slide function happens for Segment ID = 'Dabblers' -->
+<!-- <div class="mask force-slide"></div> -->

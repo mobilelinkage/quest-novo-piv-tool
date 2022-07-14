@@ -1,0 +1,512 @@
+body {
+    font-family: 'Frutiger LT Std';
+}
+
+#dataViz {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 37.5px;
+}
+
+.chart-eyebrow-left {
+    position: absolute;
+    width: 750px;
+    height: 11px;
+    top: 127px;
+    left: 75.5px;
+    .note{
+        font-weight: bold;
+        font-style: italic;
+        font-size: 10px;
+        color:#64656a;
+        display: block;
+        height:19px;
+    }
+}
+
+.chart-eyebrow-right {
+    position: absolute;
+    width: 241px;
+    height: 11px;
+    top: 144px;
+    left: 594px;
+}
+
+.chart-eyebrow-left p,
+.chart-eyebrow-right p {
+    font-style: italic;
+    font-size: 11px;
+    color: #006373;
+    margin: 0;
+    font-weight: 900;
+}
+
+.top-container {
+    position: absolute;
+    top: 50px;
+    left: 75.5px;
+    width: 758px;
+    height: 71.5px;
+    display: flex;
+    justify-content: space-between;
+    .half-container {
+        width: 49.3%;
+    }
+
+}
+
+// .top-container-dcs {
+//     justify-content: start;
+// }
+
+.dosage {
+    .data-selection-container {
+        input[type='radio'] + label {
+            margin-right: 10px;
+        }
+    }
+}
+
+.dosage-dcs {
+
+    margin-right:10px
+}
+
+.baseline {
+    .data-selection-container {
+        input[type='radio'] + label {
+            margin-right: 6px;
+        }
+    }
+}
+
+.data-selection-eyebrow {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 9px;
+    color: #64656a;
+    margin: 0 0 4px;
+}
+
+.data-selection-container {
+    background-color: #f8f7f5;
+    border-radius: 7px;
+    padding: 6px 12px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 58.5px;
+    &.no-flex {
+        display: block;
+        justify-content: unset;
+    }
+    .data-selection-heading {
+        font-weight: 900;
+        font-size: 10px;
+        color: #006373;
+        margin: 0;
+        padding: 0 0 5px;
+    }
+    > div {
+        display: flex;
+    }
+}
+
+input[type='radio'] {
+    display: none;
+    & + label {
+        font-family: 'Frutiger LT Std Condensed';
+        font-weight: bold;
+        font-size: 9px;
+        color: #64656a;
+        padding: 6.5px 9.5px 0 21px;
+        position: relative;
+        white-space: nowrap;
+        height:14px;
+        line-height:10px;
+
+        &:before {
+            content: '';
+            background-image: url(../../res/img/radio-input-unselected.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            height: 10.5px;
+            width: 10.5px;
+            position: absolute;
+            left: 6px;
+            top: 5px;
+        }
+
+        sup{
+            vertical-align: top;
+            font-size: 0.6em;
+            position: relative;
+            top: -0.5em;
+        }
+    }
+    &:checked + label {
+        color: #fff;
+        background: #006373;
+        border-radius: 4px;
+        position: relative;
+        &:before {
+            background-image: url(../../res/img/radio-input-selected.png);
+        }
+    }
+    &:disabled + label {
+        color: #d1d1d1;
+    }
+}
+
+.trial {
+    .data-selection-container {
+        .data-selection-heading {
+            padding: 0 0 2px;
+        }
+    }
+    input[type='radio'] {
+        & + label {
+            height: 24px;
+        }
+        & + label.single-line {
+            padding-top: 11.5px;
+            height: 19px;
+        }
+        & + label:before {
+            top: 10px;
+        }
+    }
+}
+
+
+// .trial-dcs {
+
+//     margin-right:10px;
+
+//     input[type='radio']{
+
+//         & + label {
+//             padding-left: 10px;
+//         }
+
+//         & + label:before {
+//             content: none;
+            
+//         }
+//     }
+    
+// }
+
+.y-axis-label {
+    position: absolute;
+    left: -58px;
+    top: 303px;
+    width: 225px;
+    height: 11px;
+    p {
+        font-weight: 300;
+        font-style: italic;
+        font-size: 9px;
+        color: #64656a;
+        transform: rotate(270deg);
+        text-align: center;
+    }
+}
+
+.chart-container {
+    position: absolute;
+    top: 163px;
+    left: 75px;
+    color: #64656a;
+    .chart {
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+        height: 225px;
+        width: 757px;
+        position: relative;
+        > div {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -15px;
+        }
+    }
+    .conditional-disclaimer {
+        display: none;
+        position: absolute;
+        bottom: 9px;
+        left: 10px;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 9px;
+        color: #000;
+        &.show {
+            display: block;
+        }
+    }
+}
+
+.labels {
+    display: flex;
+    justify-content: space-around;
+    font-size: 10px;
+    width: 100%;
+    margin-bottom: 5px;
+    padding-left: 3px;
+    > div {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 182px;
+        align-items: center;
+    }
+    .main {
+        font-weight: bold;
+        font-size: 10px;
+    }
+    .subgroup {
+        font-weight: bold;
+        font-style: italic;
+        font-size: 9px;
+        display: flex;
+        justify-content: space-around;
+        width: 70%;
+
+        span:nth-of-type(2){
+            margin-left:10px;
+        }
+    }
+
+    .subgroup {
+        width: 84%;
+    }
+}
+
+.right-container {
+    position: absolute;
+    top: 50px;
+    left: 852px;
+    width: 141px;
+    height: 238px;
+    .data-selection-eyebrow,
+    .legend-selection-eyebrow {
+        font-size: 9px;
+        font-weight: bold;
+        font-style: italic;
+        color: #64656a;
+        margin: 0 0 4px;
+    }
+    .data-selection-container {
+        height: 145px;
+        padding: 14px 18.5px;
+        flex-direction: column;
+        background-color: #f8f7f5;
+        border-radius: 7px;
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+    input[type='radio'] {
+        display: none;
+        & + label {
+            padding: 6px;
+            display: block;
+            font-size: 11px;
+            text-align: center;
+            font-family: 'Frutiger LT Std Condensed';
+            font-weight: bold;
+            color: #64656a;
+            position: relative;
+            &:before {
+                background: none;
+            }
+        }
+        & + label[for='a1c-chart'] {
+            border: 1px solid #006373;
+            border-radius: 4px;
+            margin-bottom:7px;
+        }
+        & + label[for='weight-chart'] {
+            border: 1px solid #006373;
+            border-radius: 4px;
+        }
+        & + label[for='a1c_percent-chart'] {
+            border: 1px solid #006373;
+            border-radius: 4px;
+            margin-top: 7px;
+        }
+        &:checked + label {
+            padding: 6px;
+            color: #fff;
+            background: #006373;
+            position: relative;
+            font-family: 'Frutiger LT Std Condensed';
+            font-weight: bold;
+            &:before {
+                background: none;
+            }
+        }
+    }
+    .legend-selection-eyebrow {
+        margin: 20px 0px 5px;
+    }
+    .legend-options-container {
+        background-color: #f8f7f5;
+        border-radius: 7px;
+        padding-top: 9px;
+        padding-bottom: 5px;
+        p {
+            font-weight: bold;
+            font-size: 11px;
+            margin: 0 0 5px 28px;
+            line-height: 1.1;
+            position: relative;
+            &:before {
+                content: '';
+                width: 10.5px;
+                height: 10.5px;
+                border-radius: 50%;
+                background-color: #a8a7a8;
+                position: absolute;
+                left: -17px;
+                top: 2px;
+            }
+            &:nth-child(2):before {
+                background-color: #dddddd;
+            }
+            &:nth-child(-n + 2) {
+                color: #a8a7a8;
+            }
+            sup {
+                position: relative;
+                vertical-align: top;
+                top: -3px;
+            }
+        }
+        .red-filled,
+        .red-unfilled {
+            color: #da0712;
+        }
+        .red-filled:before {
+            background-color: #da0712;
+        }
+        .red-unfilled:before {
+            background-color: #ee7373;
+        }
+        .orange-filled,
+        .orange-unfilled {
+            color: #ec7800;
+        }
+        .orange-filled:before {
+            background-color: #ec7800;
+        }
+        .orange-unfilled:before {
+            background-color: #f9b773;
+        }
+        .small {
+            font-size: 8px;
+        }
+    }
+}
+
+.adverse-events-link {
+    position: absolute;
+    right: 30px;
+    top: 406px;
+    width: 145.5px;
+    height: 29.5px;
+    background-image: url(../../res/img/btn-adverse-events.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.adverse-events-container {
+    .adverse-events-content {
+        width: 943px;
+        height: 442px;
+        background-size: 100% 100%;
+        background-repeat : no-repeat;
+        &.trulicity {
+            background-image: url(../../res/img/modal-1-adverse-events.png);
+        }
+        &.lantus {
+            background-image: url(../../res/img/modal-2-adverse-events.png);
+        }
+        &.basalInsulin {
+            background-image: url(../../res/img/modal-3-adverse-events.png);
+        }
+        &.sglt {
+            background-image: url(../../res/img/modal-4-adverse-events.png);
+        }
+    }
+}
+
+.chart-disclaimer {
+    position: absolute;
+    width: 1024px;
+    height: 61px;
+    top: 13.5px;
+    left: 0;
+    text-align: center;
+    p {
+        font-weight: 900;
+        font-style: italic;
+        font-size: 11px;
+        color: #006373;
+        margin: 0;
+    }
+}
+
+
+  
+.disclaimer-modal-active .modal-overlay {
+    background-image: url(../../shared/img/bg-modal-overlay-disclaimer.png);
+  }
+  
+  .disclaimer-modal-container {
+    background-image: url(../../shared/img/disclaimer-modal.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 944px;
+    height: 417.5px;
+    top: 50px;
+  }
+  
+  .disclaimer-modal-container .modal-button-close {
+    /*
+    background-image: url(../../shared/img/disclaimer-continue-button.png);
+    background-repeat: no-repeat;
+    */
+    background-image:none;
+    width: 165.5px;
+    height: 43.5px;
+    top: 348px;
+    right: 34px;
+  }
+
+  .dcs-modal {
+
+    background-image: url(../../shared/img/disclaimer-modal-dcs.png);
+  }
+  
+  .dcs-sd {
+  
+    background-image: url(../../shared/img/global_study_design_full_dcs.png);
+  
+  }
+  
+  .dcs-isi {
+  
+    background-image: url(../../shared/img/global_isi_full_dcs.png);
+  }
+  
+  .dcs-references-modal{
+  
+    background-image: url(../../shared/img/references-modal-dcs.png);
+  }
+  
+  .dcs-disable-modal {
+    display: none;
+  }

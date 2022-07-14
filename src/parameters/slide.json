@@ -1,0 +1,235 @@
+{
+    "slide": [
+        {
+            "id": 100,
+            "name": "100",
+            "description": "The Science of Obesity",
+            "bodyclass": "home",
+            "isi_position": "0",
+            "disable_actions": "Swipe, History Buttons, Navigation Bar",
+            "template": [
+                "top-nav-static",
+                "100"
+            ],
+            "js": [],
+            "less": [
+                "custom.top-nav-static"
+            ],
+            "custom_reaction": "n/a",
+            "veeva": [
+                {
+                    "domainID": 1,
+                    "vaultID": 4518
+                }
+            ]
+        },
+        {
+            "id": 200,
+            "name": "200",
+            "description": "Obesity: A Chronic Disease",
+            "bodyclass": "section-a1c section-glp1-activity chronic-disease",
+            "isi_position": "",
+            "disable_actions": "Swipe, History Buttons, Navigation Bar",
+            "template": [
+                "top-nav-static",
+                "200"
+            ],
+            "js": [],
+            "less": [
+                "custom.top-nav-static",
+                "custom.tabs",
+                "custom.200"
+            ],
+            "custom_reaction": "n/a",
+            "veeva": [
+                {
+                    "domainID": 1,
+                    "vaultID": 4519
+                }
+            ]
+        },
+        {
+            "id": 300,
+            "name": "300",
+            "description": "Obesity: On The Rise",
+            "bodyclass": "section-weight section-inadequate-activity on-the-rise",
+            "isi_position": "",
+            "disable_actions": "Swipe, History Buttons, Navigation Bar",
+            "template": [
+                "top-nav-static",
+                "300"
+            ],
+            "js": [],
+            "less": [
+                "custom.top-nav-static"
+            ],
+            "custom_reaction": "n/a",
+            "veeva": [
+                {
+                    "domainID": 1,
+                    "vaultID": 4520
+                }
+            ]
+        },
+        {
+            "id": 400,
+            "name": "400",
+            "description": "Strategies that Impact Obesity",
+            "bodyclass": "section-cvot section-boosted-activity impact-obesity",
+            "isi_position": "",
+            "disable_actions": "Swipe, History Buttons, Navigation Bar",
+            "template": [
+                "top-nav-static",
+                "400"
+            ],
+            "js": [],
+            "less": [
+                "custom.top-nav-static"
+            ],
+            "custom_reaction": "n/a",
+            "veeva": [
+                {
+                    "domainID": 1,
+                    "vaultID": 4521
+                }
+            ]
+        },
+        {
+            "id": 500,
+            "name": "500",
+            "description": "ROI Model Overview",
+            "bodyclass": "section-cvot section-boosted-activity impact-obesity",
+            "isi_position": "",
+            "disable_actions": "Swipe, History Buttons, Navigation Bar",
+            "template": [
+                "top-nav-tool",
+                "500"
+            ],
+            "js": [
+                "custom.500"
+            ],
+            "less": [
+                "custom.top-nav-tool",
+                "custom.500"
+            ],
+            "custom_reaction": "n/a",
+            "veeva": []
+        },
+        {
+            "id": 700,
+            "name": "700",
+            "description": "Impact of BMI Reduction Tool",
+            "bodyclass": "section-cvot section-boosted-activity impact-obesity",
+            "isi_position": "",
+            "disable_actions": "Swipe, History Buttons, Navigation Bar",
+            "template": [
+                "top-nav-tool",
+                "700"
+            ],
+            "js": [
+                "custom.700",
+                "custom.side-nav",
+                "custom-selects",
+                "number-input",
+                "range-slider",
+                "traytoggle",
+                "totalCostCalculations3",
+                "yearLabels",
+                "bmiChart",
+                "topFive",
+                "AverageCVD_Sheet_Data",
+                "MarkovCVD_Sheet_Data",
+                "age_percentages_by_year",
+                "AverageHFpEF_Sheet_Data",
+                "AverageOA_Sheet_Data",
+                "MarvokHFpEF_Sheet_Data",
+                "roiTable",
+                "detailedResults_loop_sammy-geoff-redux",
+                "buildDistributionTables_refactor",
+                "populateDetailedResults",
+                "eventsChart",
+                "savingsChart",
+                "json/market_share_branded_AOM_only",
+                "json/ROI2",
+                "json/ROI3",
+                "json/ROI4",
+                "json/ROI5",
+                "json/ROI7",
+                "json/ROI8",
+                "json/ROI9",
+                "json/ROI10",
+                "json/ROI11",
+                "json/ROI12",
+                "json/ROI13",
+                "json/ROI14",
+                "json/ROI15",
+                "json/ROI16",
+                "json/Intervention_Costs_AOM",
+                "json/central_data_control",
+                "json/primary_patient_pay",
+                "json/BMI_age_proportions",
+                "json/Age_percentages_by_year",
+                "json/AOMCumulativeDiscontinuation",
+                "json/Prevalence",
+                "json/direct_medical_costs",
+                "json/pharmacy_costs",
+                "json/absenteeism",
+                "json/workers_compensation",
+                "json/short_term_disability",
+                "json/Long_term_disability",
+                "json/direct_medical_costs_covariates",
+                "json/pharmacy_costs_covariates",
+                "json/absenteeism_covariates",
+                "json/workers_compensation_covariates",
+                "json/short_term_disability_covariates",
+                "json/Long_term_disability_covariates",
+                "json/Cumulative_percentage_BMI_change_completers",
+                "json/AOM_Wegovy_efficacy_raw_calculations",
+                "json/Intensive_lifestyle_therapy",
+                "json/BMIAgeSummary",
+                "json/employeeNumber",
+                "json/NI_Efficacy_Calculations",
+                "json/industry",
+                "json/industry_age_distribution",
+                "json/industry_sex_distribution",
+                "json/Savings_Minus_Investment_no_intervention",
+                "totalCostCalculations1",
+                "summaryChart",
+                "getMarkovOA_Sheet_Data",
+                "eventsResults",
+                "populateEventResults",
+                "eventsTables",
+                "json/Obesity_Class",
+                "json/ROI1",
+                "currentEmployees",
+                "populateSimpleResults",
+                "populate_modal",
+                "user_inputs",
+                "userInputs",
+                "loadingModal"
+            ],
+            "less": [
+                "custom.top-nav-tool",
+                "custom.700",
+                "main",
+                "allInputs",
+                "piv-select-box",
+                "number-input",
+                "range-slider",
+                "calculate-button",
+                "resultsPage",
+                "actionsPage",
+                "tray",
+                "charts",
+                "loading-modal"
+            ],
+            "custom_reaction": "n/a",
+            "veeva": [
+                {
+                    "domainID": 1,
+                    "vaultID": 4522
+                }
+            ]
+        }
+    ]
+}

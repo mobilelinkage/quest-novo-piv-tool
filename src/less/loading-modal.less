@@ -1,0 +1,50 @@
+.loading-modal__backdrop {
+    background: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 5000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-modal__backdrop.hidden {
+    display: none;
+}
+
+.loading-modal__spinner {
+    height: 200px;
+    width: 200px;
+    position: relative;
+
+    animation: spin 2s ease-in-out infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(45deg);
+    }
+    to {
+        transform: rotate(1125deg);
+    }
+}
+
+.loading-modal__arrow-up, 
+.loading-modal__arrow-down {
+    position: absolute;
+    height: 75%;
+    width: 75%;
+}
+
+.loading-modal__arrow-up {
+    bottom: 0;
+    left: 0;
+}
+
+.loading-modal__arrow-down {
+    top: 0;
+    right: 0;
+}

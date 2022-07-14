@@ -1,0 +1,71 @@
+/* for the input results tray */
+
+/* THIS WILL BE ACTIVATED ONCE IT IS INCORPORATED INTO THE IVA
+.inputsTray {
+	background-color: #fff;
+	width: 979px;
+	height: 214px;
+	top: 554px;
+	position: absolute;
+}
+	
+.inputsTray.fullSize {
+		height: 100%;
+		top: 0px;
+}
+
+.inputsTray .allInputs_Table {
+	display: none;
+}
+
+.inputsTray.fullSize .allInputs_Table {
+	display: block;
+}
+*/
+
+
+
+
+
+
+
+.inputsTrayTrigger {
+	border-top: 1px solid #c7cbce;
+	padding: 20px 0 20px 0;
+	margin: 16px 0 10px 0;
+	position: relative;
+}
+
+.inputsTrayTrigger.hidden {
+	display: none;
+}
+
+.inputsTrayTrigger::before {
+	position: relative;
+	display: inline-block;
+	content: "";
+	top: 3px;
+	right: 0px;
+	background-image: url(../../res/img/icon-all-inputs.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 16px;
+	height: 13px;
+	margin-right: 12px;
+}
+
+.inputsTrayTrigger::after {
+	position: absolute;
+	display: inline-block;
+	color: #2a918b;
+	font-size: 20px;
+	content: "+";
+	top: 17px;
+	right: 30px;
+	width: 16px;
+	height: 13px;
+}
+
+.inputsTray.fullSize .inputsTrayTrigger::after {
+	transform: rotateY(0deg) rotate(45deg);
+}

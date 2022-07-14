@@ -1,0 +1,27 @@
+<!--
+  STANDARD BOILERPLATE: DO NOT EDIT
+  begin: bottom.htm
+-->
+<script>
+	var iva_presentation_name = "<%=name%>";
+</script>
+
+<%if(typeof(js) != "undefined"  && js.length>0){ %>
+	<%for(var i=0;i<js.length;i++){ 
+		if ( js[i].indexOf("hammer") > -1 || js[i].indexOf("jquery") > -1 ) continue;
+		%>
+		
+		<script src="./shared/js/<%=js[i]%>.js" type="text/javascript"></script>
+	<%}%>
+<%}%> 
+
+<script>
+	$(document).ready(function() {
+		$(document).on('touchmove', function(e) {
+			e.preventDefault();
+		});
+	});
+</script>
+</body>
+</html>
+<!-- end: bottom.htm -->

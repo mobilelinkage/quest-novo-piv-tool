@@ -1,0 +1,64 @@
+/**
+ * @file custom.tabs.less
+ *
+ * Specific rules for dynamic tabs.
+ *
+ * References to shared images should be to: ../../shared/img/
+ * References to slide images should be to: ../../res/img/
+ */
+
+
+/**
+ * data-tab setting for dynamic tab
+ */
+
+  .tab-bg {
+    background-image: url(../../shared/img/bg-grey.png);
+    background-size: 100% 100%;
+    width: 132px;
+    height: 388px;
+    top: 88px;
+    position: absolute;
+  }
+
+  [data-tab] {
+    background-size: 100% 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  [data-tab]::before {
+    content: '';
+    display: block;
+    position: absolute;
+    pointer-events: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  /* data-tab id setting */
+  [data-tab-id] {
+    left: 11px;
+    width: 93px;
+    height: 113px;
+  }
+
+//   [data-tab-id].selected {
+//     width: 92px;
+//     left: 11px;
+//   }
+
+
+//   /* Adjust tab element's z-index inside tab */
+//   [data-tab] [data-tab-id] {
+//     z-index: 1;
+//   }
+
+//   [data-tab]::before {
+//     z-index: 2;
+//   }
+
+//   [data-tab] [data-modal-target] {
+//     z-index: 3;
+//   }

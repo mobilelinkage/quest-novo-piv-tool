@@ -1,0 +1,154 @@
+/**
+ * @file boilerplate.less
+ *
+ * Global rules that will apply to all IVA projects.
+ */
+
+// This is already applied in top.htm for body.
+// We also add this style to the html element so that external PIs
+//    no longer suffer the 1 page lock bug when iScroll elements are enabled
+html,
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 1024px;
+  height: 768px;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/**
+ * Background image elements on the page use the .sprite class name.
+ * The psd2html.js tool will automatically apply this in the markup it builds.
+ */
+.sprite {
+  position: absolute;
+  display: block;
+  background-size: 100% 100%;
+  -webkit-user-select: none;
+}
+.sprite.hidden {
+  display: none !important; // Should not be overwritten.
+}
+
+
+/**
+ * Hotlink (a button link to another slide and/or presentation).
+ */
+.hotlink {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+}
+
+
+/**
+ * Expanding ISI.
+ */
+[data-expanding-isi] {
+  box-sizing: border-box;
+  position: absolute;
+}
+
+[data-toggle-expand-isi] {
+  position: absolute;
+}
+
+
+/**
+ * Hide video timeline bar.
+ */
+*::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+audio::-webkit-media-controls-timeline,
+video::-webkit-media-controls-timeline {
+  visibility: hidden;
+}
+
+
+/**
+ * Content swap tiles.
+ */
+[data-swap-container] [data-swap-tile] {
+  opacity: 0;
+  -webkit-transition: opacity 0.35s ease-in;
+}
+
+[data-swap-container] [data-swap-tile].is-active {
+  opacity: 1;
+  z-index: 10;
+}
+
+[data-swap-active] {
+  display: none !important;
+}
+
+
+/**
+  * Animation: Image Wipe
+  * animates an image reveal
+  * left to right | bottom to top
+  *
+*/
+[data-img-reveal="leftright"] {
+  left: inherit;
+  -webkit-animation: leftright 1s forwards;
+}
+
+[data-img-reveal="rightleft"] {
+  right: inherit;
+  -webkit-animation: leftright 1s forwards;
+  animation: leftright 1s forwards;
+}
+
+[data-img-reveal="bottomtop"] {
+  bottom: inherit;
+  -webkit-animation: bottomtop 1s forwards;
+  animation: bottomtop 1s forwards;
+}
+
+[data-img-reveal="topbottom"] {
+  top: inherit;
+  -webkit-animation: bottomtop 1s forwards;
+  animation: bottomtop 1s forwards;
+}
+
+// Left to Right
+@-webkit-keyframes leftright {
+  from { width: 0%;}
+  to { width: 100%;}
+}
+@keyframes leftright {
+  from { width: 0%;}
+  to { width: 100%;}
+}
+
+//Bottom to Top
+@-webkit-keyframes bottomtop {
+  from { height: 0; }
+  to { height: 100%;}
+}
+@keyframes bottomtop {
+  from { height: 0;}
+  to { height: 100%;}
+}
+
+
+/**
+  * Briefcase Widget
+  *
+*/
+a[data-rep-trigger],
+li[data-rep-trigger],
+div[data-rep-trigger],
+button[data-rep-trigger] {
+  display: none;
+}

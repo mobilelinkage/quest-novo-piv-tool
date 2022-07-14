@@ -1,0 +1,76 @@
+{
+    "presentation": [
+        {
+            "thumber": {
+                "viewportWidth": 1024,
+                "viewportHeight": 768,
+                "thumbnailWidth": 1024,
+                "thumbnailHeight": 768
+            },
+            "id": 1,
+            "description": "Managed Markets Pharmaco-Intervention Value Tool",
+            "name": "novo-managedmarkets-piv-tool",
+            "external_id": "novo-managedmarkets-piv-tool",
+            "product": "Unbranded",
+            "country": "United States",
+            "bodyclass": "",
+            "slide": [
+                100,
+                200,
+                300,
+                400,
+				500,
+				700
+            ],
+            "template": [
+                "global"
+            ],
+            "less": [
+                "boilerplate",
+                "boilerplate.modal",
+                "custom.brand",
+                "custom.menu",
+                "custom.tabs",
+                "custom.brand-presentations",
+                "custom.expandable-isi"
+            ],
+            "js": [
+                "vendor/jquery",
+                "vendor/veeva-library",
+                "vendor/hammer",
+                "vendor/jquery.hammer",
+                "vendor/iscroll",
+                "boilerplate/boilerplate.tabs",
+                "boilerplate/boilerplate.modal",
+                "boilerplate/boilerplate.modal-forced",
+                "boilerplate/boilerplate.swipe",
+				"boilerplate/boilerplate.isi",
+                "boilerplate/boilerplate.hotlink",
+                "boilerplate/boilerplate.video",
+                "boilerplate/boilerplate.content-swap",
+                "boilerplate/boilerplate.expanding-isi",
+                "boilerplate/boilerplate.clickstream-library",
+                "custom.study_design",
+				"custom.next_prev",
+                "custom.references",
+                "custom.active_modal",
+                "custom.modal_tabs",
+                "custom.hotlink",
+                "custom.active_tab",
+                "custom.clickstream"
+            ],
+            "veeva": [
+                {
+                    "domainID": 1,
+                    "vaultID": 4516
+                }
+            ],
+            "sharedcontent": [
+                {
+                    "domainID": 1,
+                    "vaultID": 4517
+                }
+            ]
+        }
+    ]
+}

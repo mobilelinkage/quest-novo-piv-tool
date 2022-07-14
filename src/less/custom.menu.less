@@ -1,0 +1,228 @@
+/**
+ * @file custom.menu.less
+ *
+ * Specific rules for the IVA's menu.
+ *
+ * This file will ultimately live at: ./shared/css/
+ * References to shared images should be to: ../../shared/img/
+ * References to slide images should be to: ../../res/img/
+ */
+
+@section-link-left-val: 55px;
+@section-link-left-val-col-2: 410px;
+@section-link-left-val-col-3: 546px;
+@section-link-left-val-col-4: 683px;
+@section-link-left-val-col-5: 825px;
+
+
+.menu-modal {
+  background: url(../../shared/img/global_menu-modal.png) no-repeat 0 25px;
+  background-size: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0;
+  width: 1024px;
+  height: 768px;
+
+  transform: none;
+  -webkit-transform: none;
+}
+.menu-modal .menu-link {
+  position: absolute;
+  width: 345px;
+  left: @section-link-left-val;
+  height: 50px;
+}
+
+// Home Links
+.menu-modal .menu-link-100 {
+  top: 65px;
+}
+
+// CV Links
+.menu-modal .menu-link-80,
+.menu-modal .menu-link-80-1,
+.menu-modal .menu-link-90,
+.menu-modal .menu-link-90-1 {
+  top: 140px;
+}
+
+.menu-modal .menu-link-80-1 {
+  left: @section-link-left-val-col-2;
+  width: 135px;
+}
+
+.menu-modal .menu-link-90 {
+  left: @section-link-left-val-col-3;
+  width: 135px;
+}
+
+.menu-modal .menu-link-90-1 {
+  left: @section-link-left-val-col-4;
+  width: 155px;
+}
+
+// CVOT Links
+.menu-modal .menu-link-410 {
+  top: 210px;
+  width: 430px;
+}
+
+// AIC Links
+.menu-modal .menu-link-150,
+.menu-modal .menu-link-200,
+.menu-modal .menu-link-200-1,
+.menu-modal .menu-link-200-2,
+.menu-modal .menu-link-200-3 {
+  top: 280px;
+}
+
+.menu-modal .menu-link-200 {
+  left: @section-link-left-val-col-2;
+  width: 135px;
+}
+
+.menu-modal .menu-link-200-1 {
+  left: @section-link-left-val-col-3;
+  width: 135px;
+}
+
+.menu-modal .menu-link-200-2 {
+  left: @section-link-left-val-col-4;
+  width: 142px;
+}
+
+.menu-modal .menu-link-200-3 {
+  left: @section-link-left-val-col-5;
+  width: 140px;
+}
+
+// Weight Links
+.menu-modal .menu-link-300,
+.menu-modal .menu-link-300-1,
+.menu-modal .menu-link-300-2,
+.menu-modal .menu-link-300-3 {
+  top: 350px;
+}
+
+.menu-modal .menu-link-300-1 {
+  left: @section-link-left-val-col-2;
+  width: 136px;
+}
+
+.menu-modal .menu-link-300-2 {
+  left: @section-link-left-val-col-3;
+  width: 136px;
+}
+
+.menu-modal .menu-link-300-3 {
+  left: @section-link-left-val-col-4;
+  width: 180px;
+}
+
+// Safety Links
+.menu-modal .menu-link-500,
+.menu-modal .menu-link-500-1,
+.menu-modal .menu-link-500-2 {
+  top: 425px;
+}
+
+.menu-modal .menu-link-500-1 {
+  left: @section-link-left-val-col-2;
+  width: 180px;
+}
+
+.menu-modal .menu-link-500-2 {
+  left: @section-link-left-val-col-3;
+  width: 180px;
+}
+
+// Initiation Links
+.menu-modal .menu-link-600,
+.menu-modal .menu-link-600-1,
+.menu-modal .menu-link-600-2 {
+  top: 500px;
+}
+
+.menu-modal .menu-link-600-1 {
+  left: @section-link-left-val-col-2;
+  width: 135px;
+}
+
+.menu-modal .menu-link-600-2 {
+  left: @section-link-left-val-col-3;
+  width: 180px;
+}
+
+// Support Links
+.menu-modal .menu-link-700,
+.menu-modal .menu-link-700-1,
+.menu-modal .menu-link-700-2 {
+  top: 570px;
+}
+
+.menu-modal .menu-link-700-1 {
+  left: @section-link-left-val-col-2;
+  width: 135px;
+}
+
+.menu-modal .menu-link-700-2 {
+  left: @section-link-left-val-col-3;
+  width: 180px;
+}
+
+// Summary Links
+.menu-modal .menu-link-800 {
+  top: 640px;
+}
+
+// FLEX
+.menu .flex-button {
+  position: absolute;
+  width: 67px;
+  height: 38px;
+  right: 339px;
+  top: 0;
+  background-size: 100%;
+  background-position: center;
+  background-image: url(../../shared/img/global_btn-flex.png);
+  background-repeat: no-repeat;
+    &.disabled{
+    background-image: url(../../shared/img/global_btn-flex-disabled.png);
+  }
+}
+
+// Migration
+.menu .migration-button {
+  position: absolute;
+  width: 25.5px;
+  height: 25.5px;
+  right: 445px;
+  top: 6px;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../../shared/img/global_btn-migration.png);
+  z-index: 1;
+  &.disabled {
+    background-image: url(../../shared/img/global_btn-migration-disabled.png);
+  }
+}
+
+
+// Patient Support
+.menu .support-button {
+  position: absolute;
+  width: 145.5px;
+  height: 25.5px;
+  left: 420px;
+  top: 6px;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../../shared/img/global_btn-patient-support.png);
+  &[disabled]{
+    background-image: url(../../shared/img/global_btn-patient-support-disabled.png);
+  }
+}
+

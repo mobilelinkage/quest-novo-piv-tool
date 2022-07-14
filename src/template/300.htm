@@ -1,0 +1,165 @@
+<style>
+
+  .img--content {
+    height: 768px;
+
+  }
+  
+  .img--references {
+    width: 807.5px;
+    height: 438.5px;
+    background-repeat:no-repeat;
+  }
+  
+  .img--abbreviation {
+    width: 580px;
+    height: 140.5px;
+    background-repeat:no-repeat;
+  }
+  
+
+  /* modal triggers */
+  
+  [data-modal-target] {
+    width: 131px;
+    height: 50px;
+  }
+
+  [data-modal-target=".modal-1-1"] {
+    top: 389px;
+    left: 173px;
+  }
+  
+  [data-modal-target=".modal-2"] {
+    top: 391px;
+    left: 470px;
+  }
+  
+  [data-modal-target=".modal-3"] {
+    top: 389px;
+    left: 768px;
+  }
+  
+  .inner-one[data-modal-target=".modal-1-1"] {
+    top: 466px;
+    left: 165px;
+  }
+  
+  .inner-two[data-modal-target=".modal-1-2"] {
+    top: 466px;
+    left: 347px;
+  }
+  
+  .inner-three[data-modal-target=".modal-1-3"] {
+	top: 466px;
+    left: 518px;
+  }
+
+
+
+  /* popup modal style */
+  
+
+
+  .map-modal {
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+	width: 807px;
+	height: 605.5px;
+  }
+  
+  .map-modal .modal-button-close {
+	right: 16px;
+	top: 16px;
+  }
+  
+  .modal-1-1 {
+	background-image: url(res/img/modal-1-1.png);
+	background-repeat:no-repeat;
+  }
+
+  .modal-1-2 {
+	background-image: url(res/img/modal-1-2.png);
+	background-repeat:no-repeat;
+  }
+  
+  .modal-1-3 {
+	background-image: url(res/img/modal-1-3.png);
+	background-repeat:no-repeat;
+  }
+
+  .modal-2 {
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+	width: 806px;
+	height: 605px;
+	background-image: url(res/img/modal-2.png);
+	background-repeat:no-repeat;
+  }
+
+  .modal-2 .modal-button-close {
+	right: 16px;
+	top: 16px;
+  }
+  
+  .modal-3 {
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+	width: 806px;
+	height: 506px;
+	background-image: url(res/img/modal-3.png);
+	background-repeat:no-repeat;
+  }
+
+  .modal-3 .modal-button-close {
+	right: 16px;
+	top: 16px;
+  }
+
+
+
+</style>
+
+
+<div class="img--content sprite layer"></div>
+
+
+<!-- Modal Triggers -->
+<a data-modal-trigger-open data-modal-target=".modal-1-1" class="tabs-modal-trigger one disable-swipe" data-button-name="Modal - Prevalence"></a>
+<a data-modal-trigger-open data-modal-target=".modal-2" class="tabs-modal-trigger two disable-swipe" data-button-name="Modal - Comorbidities"></a>
+<a data-modal-trigger-open data-modal-target=".modal-3" class="tabs-modal-trigger three disable-swipe" data-button-name="Modal - Costs"></a>
+
+
+
+<!-- Modal Containers -->
+
+<div class="modal-1-1 content-modal map-modal modal" data-modal-name="Prevalence: Non-Hispanic white adults">
+	<a class="modal-button-close" data-modal-trigger-close></a>
+	<a data-modal-trigger-open data-modal-target=".modal-1-2" class="tabs-modal-trigger inner-two disable-swipe" data-button-name="Modal Nav - Hispanic adults"></a>
+	<a data-modal-trigger-open data-modal-target=".modal-1-3" class="tabs-modal-trigger inner-three disable-swipe" data-button-name="Modal Nav - Non-Hispanic black adults"></a>
+</div>
+
+<div class="modal-1-2 content-modal map-modal modal" data-modal-name="Prevalence: Hispanic adults">
+	<a class="modal-button-close" data-modal-trigger-close></a>
+	<a data-modal-trigger-open data-modal-target=".modal-1-1" class="tabs-modal-trigger inner-one disable-swipe" data-button-name="Modal Nav - Non-Hispanic white adults"></a>
+	<a data-modal-trigger-open data-modal-target=".modal-1-3" class="tabs-modal-trigger inner-three disable-swipe" data-button-name="Modal Nav - Non-Hispanic black adults"></a>
+</div>
+
+<div class="modal-1-3 content-modal map-modal modal" data-modal-name="Prevalence: Non-Hispanic black adults">
+	<a class="modal-button-close" data-modal-trigger-close></a>
+	<a data-modal-trigger-open data-modal-target=".modal-1-1" class="tabs-modal-trigger inner-one disable-swipe" data-button-name="Modal Nav - Non-Hispanic white adults"></a>
+	<a data-modal-trigger-open data-modal-target=".modal-1-2" class="tabs-modal-trigger inner-two disable-swipe" data-button-name="Modal Nav - Hispanic adults"></a>
+</div>
+
+<div class="modal-2 content-modal modal" data-modal-name="Comorbidities">
+	<a class="modal-button-close" data-modal-trigger-close></a>
+</div>
+
+<div class="modal-3 content-modal modal" data-modal-name="Costs">
+	<a class="modal-button-close" data-modal-trigger-close></a>
+</div>
+
+
+
+<!-- Mask for blocking content reveal before reorder tab happens -->
+<!-- <div class="mask"></div> -->

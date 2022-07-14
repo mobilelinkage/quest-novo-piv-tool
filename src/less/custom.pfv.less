@@ -1,0 +1,113 @@
+.footer {
+  &.study-design-disabled {
+    background-image: url(../../shared/img/global_footer-links-study-design-disabled.png);
+    .study-design-link {
+      display: none;
+    }
+  }
+}
+
+.menu .flex-button {
+  position: absolute;
+  width: 67px;
+  height: 38px;
+  right: 339px;
+  top: 0;
+  background-size: 100%;
+  background-position: center;
+  background-image: url(../../shared/img/global_btn-flex.png);
+  background-repeat: no-repeat;
+    &.disabled{
+    background-image: url(../../shared/img/global_btn-flex-disabled.png);
+  }
+}
+
+.img--isi-full{
+  height:1232px;
+}
+
+.isi-container .btn-victoza-pi{
+  bottom:265px;
+}
+
+/*
+SLIDE ISI VERSIONS
+*/
+// .pfv [data-expanding-isi]{
+//   height: 290px;
+// }
+
+// .pfv [data-expanding-isi] [data-expandable-content] {
+//     height: 228px;
+//     background-position: bottom;
+// }
+// .pfv [data-expanding-isi] [data-expandable-content],
+// [data-expanding-isi][data-isi-version="ozempic"] [data-expandable-content]{
+//   background-image:url(../../shared/img/slide-isi.png);
+// }
+
+// [data-expanding-isi][data-isi-version="combination"]{
+//   height: 286px;
+// }
+// [data-expanding-isi][data-isi-version="combination"] [data-expandable-content] {
+//   background-image:url(../../shared/img/slide-isi-combination.png);
+//   height: 481.5px;
+// }
+
+// [data-expanding-isi][data-isi-version="victoza"]{
+//   height: 290px;
+// }
+// [data-expanding-isi][data-isi-version="victoza"] [data-expandable-content]{
+//   background-image:url(../../shared/img/slide-isi-victoza.png);
+//   height: 544.5px;
+// }
+
+/*
+SLIDE ISI HOTLINKS
+*/
+// [data-expanding-isi] .btn-victoza-pi,
+// [data-expanding-isi] .isi-link-victoza{
+//   display: none;
+// }
+
+// [data-expanding-isi][data-isi-version="combination"] .btn-victoza-pi,
+// [data-expanding-isi][data-isi-version="victoza"] .btn-victoza-pi,
+// [data-expanding-isi][data-isi-version="victoza"] .isi-link-victoza{
+//   display: block;
+// }
+
+// [data-expanding-isi][data-isi-version="combination"] .btn-victoza-pi{
+//   width: 100px;
+//   height: 50px;  
+//   top: 10px;
+//   left: 450px;
+// }
+// [data-expanding-isi][data-isi-version="victoza"] .btn-victoza-pi,
+// [data-expanding-isi][data-isi-version="victoza"] .isi-link-victoza{
+//   width: 165px;
+//   height: 40px;
+//   top: 0;
+// }
+// [data-expanding-isi][data-isi-version="victoza"] .btn-victoza-pi{
+//   left: 700px;
+// }
+// [data-expanding-isi][data-isi-version="victoza"] .isi-link-victoza{
+//   left: 530px;
+// }
+
+/*
+    following changes to remove artifacts from intial load on pfv slides
+*/
+.briefcase {
+    display: none !important;
+  }
+  .briefcase.modal-visible {
+    display: block !important;
+  }
+
+.img--brand-presentations{
+  display: none !important;
+}
+.img--brand-presentations.modal-visible {
+  display: block !important;
+}

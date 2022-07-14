@@ -1,0 +1,129 @@
+
+/**
+ * Expanding ISI
+ * Custom styles for the expanding ISI go here.
+ */
+
+ [data-expanding-isi] {
+  box-sizing: border-box;
+  left: 0px;
+  top: 510px;
+  width: 1024px;
+  height: 724px;
+  z-index: 100;
+  transition: top 0.25s ease-in;
+  background-image: url('../../shared/img/expanding-isi-container.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position-y: bottom;
+
+  .iScrollVerticalScrollbar {
+    transition: height 0.25s ease-in;
+    height: 155px;
+    top: 10px;
+    bottom: unset;
+    right: 0;
+    .iScrollIndicator {
+      height: 51.5px;
+      background: transparent;
+      &:after{
+        height: 47.5px;
+        position: absolute;
+        content: '';
+        width: 100%;
+        bottom: 5px;
+        display: block;
+        background: rgb(0, 99, 115);
+        border-radius: 9px;
+      }
+    }
+  }
+
+  [data-expandable-content] {
+    transition: height 0.25s ease-in;
+    position: absolute;
+    overflow: hidden;
+    left: 27.5px;
+    top: 30px;
+    width: 975px;
+    box-sizing: border-box;
+    height: 180px;
+    background: none;
+  }
+
+  .isi-full{
+    background-image: url(../../shared/img/isi-full.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+    background-size: contain;
+    height: 815px;
+    width: 955px;
+  }
+
+  [data-toggle-expand-isi] {
+    background-image: url('../../shared/img/isi-expand.png');
+    background-size: 70px 8px;
+    background-repeat: no-repeat;
+    background-position: 8px 15px;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: 50px;
+  }
+}
+
+.victoza-loe [data-expanding-isi] {
+  .isi-full {
+    height: 408.5px;
+    width: 953px;
+  }
+  &.is-expanded {
+    top: 265px;
+    .iScrollVerticalScrollbar {
+      display: none;
+    }
+  }
+  .btn-victoza-pi {
+    width: 110px;
+    height: 50px;
+    top: 365px;
+    left: 410px;
+  }
+}
+
+.home [data-expanding-isi] {
+  top: 498px;
+
+  [data-expandable-content] {
+    height: 185px;
+  }
+
+  .iScrollVerticalScrollbar {
+    height: 160px;
+  }
+
+}
+
+[data-expanding-isi].is-expanded {
+  top: 50px;
+
+  .iScrollVerticalScrollbar {
+    height: 603px;
+    .iScrollIndicator {
+      height: 281px;
+      &::after {
+        height: 277px;
+      }
+    }
+  }
+  
+  [data-expandable-content] {
+    height: 641px;
+  }
+
+  [data-toggle-expand-isi] {
+    background-image: url('../../shared/img/isi-collapse.png');
+  }
+  
+}
