@@ -1,0 +1,11 @@
+novo-xultophy-iva
+novo-tresiba-adult-iva
+novo-tresiba-pediatric-iva
+novo-educator-adherence-iva
+novo-educator-clinicalmed-iva
+novo-patient-c4c-iva
+novo-saxenda-branded-iva
+novo-saxenda-unbranded-iva
+novo-victoza-a1c-iva
+novo-victoza-cv-iva
+novo-educator-pophealth-iva
