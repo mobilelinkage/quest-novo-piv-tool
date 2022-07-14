@@ -1,0 +1,607 @@
+/**
+ * @file custom.brand.less
+ *
+ * Specific rules for this brand's IVA.
+ *
+ * This file will ultimately live at: ./shared/css/
+ * References to shared images should be to: ../../shared/img/
+ * References to slide images should be to: ../../res/img/
+ */
+/**
+ * Body
+ */
+body {
+  position: relative;
+  background-image: url(../../shared/img/bg-body.png);
+  background-size: 100% 100%;
+  touch-action: none;
+  /* DEBUG : fix for "[Intervention] preventDefault" console error*/
+
+}
+/**
+ * Brand logo.
+ */
+.brand-logo {
+  width: 192.5px;
+  right: 0;
+  bottom: 0;
+  background-size: 100%;
+  background-image: url(../../shared/img/global_brand-logo.png);
+  z-index: 1;
+}
+/**
+ * Navigation
+ */
+.nav {
+  position: absolute;
+  display: block;
+  top: 89px;
+  right: 23px;
+  z-index: 10;
+}
+.hide-navigation .nav {
+  display: none;
+}
+.nav .nav-item + .nav-item {
+  margin-top: 8px;
+}
+.nav .nav-item {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background-size: 100% 100%;
+}
+.nav-item-1 {
+  background-image: url(../../shared/img/global_nav-item-1.png);
+}
+.section-pgtc .nav-item-1 {
+  background-image: url(../../shared/img/global_nav-item-1-active.png);
+}
+.nav-item-2 {
+  background-image: url(../../shared/img/global_nav-item-2.png);
+}
+.section-pos .nav-item-2 {
+  background-image: url(../../shared/img/global_nav-item-2-active.png);
+}
+.nav-item-3 {
+  background-image: url(../../shared/img/global_nav-item-3.png);
+}
+.section-dosing .nav-item-3 {
+  background-image: url(../../shared/img/global_nav-item-3-active.png);
+}
+.nav-item-4 {
+  background-image: url(../../shared/img/global_nav-item-4.png);
+}
+.section-moa .nav-item-4 {
+  background-image: url(../../shared/img/global_nav-item-4-active.png);
+}
+.nav-item-5 {
+  background-image: url(../../shared/img/global_nav-item-5.png);
+}
+.section-support .nav-item-5 {
+  background-image: url(../../shared/img/global_nav-item-5-active.png);
+}
+/**
+ * Subnavigation
+ */
+.img--sub-nav {
+  background-image: url(../../res/img/sub_nav.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0px;
+  left: 212px;
+  width: 630px;
+  height: 44px;
+  z-index: 1020;
+}
+.img--sub-nav .menu-nav-item {
+  position: absolute;
+  height: 44px;
+}
+/**
+ * Menu bar.
+ */
+.menu {
+  position: absolute;
+  top: 0;
+  width: 1024px;
+  height: 37.5px;
+  background-size: 100% 100%;
+  background-color: #9da0a2;
+  z-index: 1011;
+}
+.menu .modal-button-open {
+  background-image: url(../../shared/img/icon-hamburger-menu.png);
+  background-size: 30px;
+}
+.menu .modal-button-open,
+.menu .modal-button-close {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  height: 37.5px;
+  width: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.menu-active .menu .modal-button-open {
+  display: none;
+}
+.menu .modal-button-close {
+  display: none;
+}
+.menu-active .menu .modal-button-close {
+  display: block;
+  background-size: 22.5px;
+  background-image: url(../../shared/img/icon-close-menu.png);
+}
+/**
+ * Footer
+ */
+.footer {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  width: 100%;
+  right: 0;
+  height: 50px;
+  padding-top: 16px;
+  background-color: transparent;
+  z-index: 10;
+  box-sizing: border-box;
+}
+.footer div {
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+.footer .study-design-link {
+  right: 0px;
+  top: -29px;
+  width: 117.5px;
+  height: 40px;
+  background-image: url(../../shared/img/global_footer-links-refs.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 75.5px 10px;
+}
+.footer .isi-link {
+  left: 270px;
+  width: 225px;
+}
+.footer .pi-link {
+  left: 495px;
+  width: 185px;
+}
+.footer.refs-disabled {
+  background-image: url(../../shared/img/global_footer-links-refs-disabled.png);
+}
+.footer.refs-disabled .references-link {
+  display: none;
+}
+.footer.sd-disabled.refs-disabled {
+  background-image: url(../../shared/img/global_footer_refsDisables_sdDisabled.png);
+}
+.footer.sd-disabled.refs-disabled .references-link,
+.footer.sd-disabled.refs-disabled .study-design-link {
+  display: none;
+}
+.references-active .footer {
+  background-position: 0px -50px;
+}
+.study-design-active .footer {
+  background-position: 0px -100px;
+}
+.isi-active .footer {
+  background-position: 0px -150px;
+}
+/*
+  Modals
+*/
+.modal-visible {
+  background-size: 100%;
+  top: 114px;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+.modal-button-close {
+  right: 22px;
+  top: 3px;
+  width: 44px;
+  height: 44px;
+  opacity: 0.5;
+}
+/*
+  Content
+*/
+.img--content {
+  background-image: url(../../res/img/content.png);
+  width: 1024px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  left: 0;
+  top: 0;
+}
+.img--content .results {
+  background-image: url(../../res/img/content-results.png);
+}
+.img--isi {
+  background-image: url(../../res/img/isi.png);
+  left: 71.5px;
+  top: 536.5px;
+}
+/*
+  ISI Container / Study Design Container
+*/
+.isi-container,
+.study-design-container {
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  width: 716px;
+  /*width: 986px;*/
+
+  height: 702px;
+  background-size: 100% 100%;
+  background-image: url(../../shared/img/global_modal.png);
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.references-container {
+  position: absolute;
+  top: 34px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  width: 806px;
+  /*width: 986px;*/
+
+  height: 719px;
+  background-size: 100% 100%;
+  background-image: url(../../shared/img/global_modal_references.png);
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.isi-title {
+  font-family: sans-serif;
+  left: 32px;
+  top: 0px;
+  color: #707171;
+}
+.isi-title::before {
+  position: relative;
+  display: inline-block;
+  content: "";
+  top: 9px;
+  right: 0px;
+  background-image: url(../../shared/img/icon-isi-book.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 28px;
+  height: 28px;
+  margin-right: 8px;
+}
+.references-title {
+  font-family: sans-serif;
+  left: 32px;
+  top: 0px;
+  color: #707171;
+}
+.references-title::before {
+  position: relative;
+  display: inline-block;
+  content: "";
+  top: 9px;
+  right: 0px;
+  background-image: url(../../shared/img/icon-references.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 28px;
+  height: 28px;
+  margin-right: 8px;
+}
+.isi-content,
+.study-design-content {
+  padding-right: 12px;
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  /* width: 918px; */
+
+  width: 673px;
+  height: 622px;
+  overflow: hidden;
+}
+.isi-content .hotlink-wegovy-pi-link {
+  position: absolute;
+  top: 1410px;
+  left: 50px;
+  width: 55px;
+  height: 20px;
+}
+.isi-content .hotlink-saxenda-pi-link {
+  position: absolute;
+  bottom: 130px;
+  left: 53px;
+  width: 55px;
+  height: 20px;
+}
+.references-content {
+  padding-right: 12px;
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  /* width: 918px; */
+
+  width: 755px;
+  height: 622px;
+  overflow: hidden;
+}
+.img--isi-full {
+  margin: 0 auto;
+  width: 663px;
+  height: 2950px;
+  right: 0;
+  bottom: 0;
+  background-size: 100%;
+  background-image: url(../../shared/img/global_isi_full.png);
+  background-repeat: no-repeat;
+}
+[data-presentation-id="novo_ozempic_bydurenon_januvia"] .img--isi-full,
+[data-presentation-id="novo_ozempic_mt2t_trailer"] .img--isi-full,
+[data-presentation-id="novo_ozempic_mt2t_full"] .img--isi-full {
+  width: 918px;
+  height: 1205px;
+}
+.isi-container .btn-victoza-pi {
+  width: 110px;
+  height: 50px;
+  bottom: 375px;
+  left: 25px;
+  position: absolute;
+  top: unset;
+}
+.img--study-design-full {
+  margin: 0 auto;
+  width: 900px;
+  height: 800px;
+  right: 0;
+  bottom: 0;
+  background-size: 100%;
+  background-image: url(../../res/img/references.png);
+  background-repeat: no-repeat;
+}
+.slideID_500 .img--study-design-full,
+slideID_700 .img--study-design-full {
+  margin: 0 auto;
+  width: 750px;
+  height: 1300px;
+  right: 0;
+  bottom: 0;
+  background-size: 100%;
+  background-image: url(../../shared/img/global_references.png);
+  background-repeat: no-repeat;
+}
+/* Debug : preventDefault console error fix */
+.img--references-full,
+.img--isi-full,
+.img--study-design-full {
+  touch-action: none;
+}
+.references-container .modal-button-close,
+.isi-container .modal-button-close,
+.study-design-container .modal-button-close {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  top: 3px;
+  right: 5px;
+  z-index: 99999;
+}
+/*
+  Scroll bar styling
+*/
+.iScrollVerticalScrollbar .iScrollIndicator {
+  position: absolute;
+  height: 316px;
+  border-radius: 9px;
+  width: 7px;
+  left: 3px;
+  background: #abacb2;
+}
+.iScrollVerticalScrollbar {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 9999;
+  width: 13px;
+  height: 614px;
+  bottom: 2px;
+  overflow: hidden;
+  background-color: transparent;
+  border-radius: 9px;
+  padding: 4px 0px;
+}
+/**
+ * Modal overlay.
+ * This is defined in boilerplate.modal.less. If we need to change the overlay
+ * colour/opacity that appears when a modal is displayed, change it here.
+ */
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  /*background-image: url(../../shared/img/bg-modal-overlay-full.png);*/
+
+  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  top: 0px;
+}
+/* needed to override .active styles in custom.main.less */
+.modal-overlay.active {
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1001;
+  /* needed to position over number of individuals dropdown with z-index of 1000 */
+
+}
+.references-active .modal-overlay,
+.isi-active .modal-overlay,
+.abbreviation-active .modal-overlay {
+  top: 0;
+}
+.brand-presentations-active .modal-overlay {
+  background-image: url(../../shared/img/bg-modal-overlay-brand.png);
+}
+.study-design-active .modal-overlay,
+.isi-active .modal-overlay {
+  background-image: url(../../shared/img/bg-modal-overlay-full.png);
+}
+/**
+ * Expanding ISI
+ * Custom styles for the expanding ISI go here.
+ */
+[data-expanding-isi] {
+  box-sizing: border-box;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 248px;
+  z-index: 100;
+  -webkit-transition: height 0.25s ease-in;
+}
+[data-expanding-isi] [data-expandable-content] {
+  background-image: url(../../res/img/slide-isi.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  position: relative;
+  width: 100%;
+}
+[data-toggle-expand-isi] {
+  background-image: url('../../shared/img/icon-expand.png');
+  background-size: 57px;
+  background-repeat: no-repeat;
+  background-position: right center;
+  right: 21px;
+  top: -1px;
+  width: 70px;
+  height: 30px;
+}
+[data-expanding-isi].is-expanded [data-toggle-expand-isi] {
+  background-image: url('../../shared/img/icon-collapse.png');
+  background-size: 68px;
+}
+[data-modal-target] {
+  display: inline-block;
+  position: absolute;
+}
+.img--bg-section-nav {
+  width: 412px;
+  height: 44px;
+  right: 43px;
+  top: 50px;
+  z-index: 10;
+}
+.img--bg-section-nav .section-nav-item {
+  left: 0;
+  width: 44px;
+  height: 44px;
+  top: 0;
+  display: block;
+}
+.img--bg-section-nav .section-nav-item-1 {
+  left: 0px;
+  width: 144px;
+}
+.img--bg-section-nav .section-nav-item-2 {
+  left: 162px;
+  width: 102px;
+}
+.img--bg-section-nav .section-nav-item-3 {
+  left: 286px;
+  width: 124px;
+}
+.slideID_700 .img--bg-section-nav {
+  display: none;
+}
+.home .img--bg-upper-nav {
+  background-position: 0px 0px;
+}
+.home .img--bg-upper-nav .upper-nav-item-1 {
+  display: none;
+}
+.home .img--bg-upper-nav .upper-nav-item-2 {
+  display: none;
+}
+.home .img--bg-section-nav {
+  display: none;
+}
+.references-active .img--bg-upper-nav {
+  background-position: 0px -99px;
+}
+.abbreviation-active .img--bg-upper-nav {
+  background-position: 0px -149px;
+}
+/**
+ * Side Navigation
+ */
+.img--bg-side-nav {
+  width: 45px;
+  height: 768px;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  opacity: 0.5;
+}
+.img--bg-side-nav .side-nav-item {
+  left: 0;
+  width: 100%;
+  height: 43px;
+}
+.img--bg-side-nav .side-nav-item-1 {
+  top: 33px;
+}
+.img--bg-side-nav .side-nav-item-2 {
+  top: 71px;
+}
+.img--bg-side-nav .side-nav-item-3 {
+  top: 117px;
+}
+.img--bg-side-nav .side-nav-item-4 {
+  top: 162px;
+}
+.img--bg-side-nav .side-nav-item-5 {
+  top: 204px;
+}
+.img--bg-side-nav .side-nav-item-6 {
+  top: 627px;
+}
+.slideID_500 .side-nav-item-6,
+.slideID_700 .side-nav-item-6 {
+  top: 591px;
+}
+.side-nav-item-7 {
+  top: 680px;
+}
+.slideID_500 .side-nav-item-7,
+.slideID_700 .side-nav-item-7 {
+  top: 635px;
+}
+.side-nav-item-8 {
+  top: 725px;
+}
+.slideID_500 .side-nav-item-8,
+.slideID_700 .side-nav-item-8 {
+  top: 681px;
+}
+.home .img--bg-side-nav .side-nav-item-1 {
+  display: none;
+}
+.slideID_100 .abbreviations-title,
+.slideID_200 .abbreviations-title,
+.slideID_300 .abbreviations-title,
+.slideID_400 .abbreviations-title {
+  display: none;
+}

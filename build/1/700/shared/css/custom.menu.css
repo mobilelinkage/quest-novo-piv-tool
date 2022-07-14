@@ -1,0 +1,177 @@
+/**
+ * @file custom.menu.less
+ *
+ * Specific rules for the IVA's menu.
+ *
+ * This file will ultimately live at: ./shared/css/
+ * References to shared images should be to: ../../shared/img/
+ * References to slide images should be to: ../../res/img/
+ */
+.menu-modal {
+  background: url(../../shared/img/global_menu-modal.png) no-repeat 0 25px;
+  background-size: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0;
+  width: 1024px;
+  height: 768px;
+  transform: none;
+  -webkit-transform: none;
+}
+.menu-modal .menu-link {
+  position: absolute;
+  width: 345px;
+  left: 55px;
+  height: 50px;
+}
+.menu-modal .menu-link-100 {
+  top: 65px;
+}
+.menu-modal .menu-link-80,
+.menu-modal .menu-link-80-1,
+.menu-modal .menu-link-90,
+.menu-modal .menu-link-90-1 {
+  top: 140px;
+}
+.menu-modal .menu-link-80-1 {
+  left: 410px;
+  width: 135px;
+}
+.menu-modal .menu-link-90 {
+  left: 546px;
+  width: 135px;
+}
+.menu-modal .menu-link-90-1 {
+  left: 683px;
+  width: 155px;
+}
+.menu-modal .menu-link-410 {
+  top: 210px;
+  width: 430px;
+}
+.menu-modal .menu-link-150,
+.menu-modal .menu-link-200,
+.menu-modal .menu-link-200-1,
+.menu-modal .menu-link-200-2,
+.menu-modal .menu-link-200-3 {
+  top: 280px;
+}
+.menu-modal .menu-link-200 {
+  left: 410px;
+  width: 135px;
+}
+.menu-modal .menu-link-200-1 {
+  left: 546px;
+  width: 135px;
+}
+.menu-modal .menu-link-200-2 {
+  left: 683px;
+  width: 142px;
+}
+.menu-modal .menu-link-200-3 {
+  left: 825px;
+  width: 140px;
+}
+.menu-modal .menu-link-300,
+.menu-modal .menu-link-300-1,
+.menu-modal .menu-link-300-2,
+.menu-modal .menu-link-300-3 {
+  top: 350px;
+}
+.menu-modal .menu-link-300-1 {
+  left: 410px;
+  width: 136px;
+}
+.menu-modal .menu-link-300-2 {
+  left: 546px;
+  width: 136px;
+}
+.menu-modal .menu-link-300-3 {
+  left: 683px;
+  width: 180px;
+}
+.menu-modal .menu-link-500,
+.menu-modal .menu-link-500-1,
+.menu-modal .menu-link-500-2 {
+  top: 425px;
+}
+.menu-modal .menu-link-500-1 {
+  left: 410px;
+  width: 180px;
+}
+.menu-modal .menu-link-500-2 {
+  left: 546px;
+  width: 180px;
+}
+.menu-modal .menu-link-600,
+.menu-modal .menu-link-600-1,
+.menu-modal .menu-link-600-2 {
+  top: 500px;
+}
+.menu-modal .menu-link-600-1 {
+  left: 410px;
+  width: 135px;
+}
+.menu-modal .menu-link-600-2 {
+  left: 546px;
+  width: 180px;
+}
+.menu-modal .menu-link-700,
+.menu-modal .menu-link-700-1,
+.menu-modal .menu-link-700-2 {
+  top: 570px;
+}
+.menu-modal .menu-link-700-1 {
+  left: 410px;
+  width: 135px;
+}
+.menu-modal .menu-link-700-2 {
+  left: 546px;
+  width: 180px;
+}
+.menu-modal .menu-link-800 {
+  top: 640px;
+}
+.menu .flex-button {
+  position: absolute;
+  width: 67px;
+  height: 38px;
+  right: 339px;
+  top: 0;
+  background-size: 100%;
+  background-position: center;
+  background-image: url(../../shared/img/global_btn-flex.png);
+  background-repeat: no-repeat;
+}
+.menu .flex-button.disabled {
+  background-image: url(../../shared/img/global_btn-flex-disabled.png);
+}
+.menu .migration-button {
+  position: absolute;
+  width: 25.5px;
+  height: 25.5px;
+  right: 445px;
+  top: 6px;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../../shared/img/global_btn-migration.png);
+  z-index: 1;
+}
+.menu .migration-button.disabled {
+  background-image: url(../../shared/img/global_btn-migration-disabled.png);
+}
+.menu .support-button {
+  position: absolute;
+  width: 145.5px;
+  height: 25.5px;
+  left: 420px;
+  top: 6px;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../../shared/img/global_btn-patient-support.png);
+}
+.menu .support-button[disabled] {
+  background-image: url(../../shared/img/global_btn-patient-support-disabled.png);
+}

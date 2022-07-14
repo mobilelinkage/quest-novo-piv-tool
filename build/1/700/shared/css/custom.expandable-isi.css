@@ -1,0 +1,111 @@
+/**
+ * Expanding ISI
+ * Custom styles for the expanding ISI go here.
+ */
+[data-expanding-isi] {
+  box-sizing: border-box;
+  left: 0px;
+  top: 510px;
+  width: 1024px;
+  height: 724px;
+  z-index: 100;
+  transition: top 0.25s ease-in;
+  background-image: url('../../shared/img/expanding-isi-container.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position-y: bottom;
+}
+[data-expanding-isi] .iScrollVerticalScrollbar {
+  transition: height 0.25s ease-in;
+  height: 155px;
+  top: 10px;
+  bottom: unset;
+  right: 0;
+}
+[data-expanding-isi] .iScrollVerticalScrollbar .iScrollIndicator {
+  height: 51.5px;
+  background: transparent;
+}
+[data-expanding-isi] .iScrollVerticalScrollbar .iScrollIndicator:after {
+  height: 47.5px;
+  position: absolute;
+  content: '';
+  width: 100%;
+  bottom: 5px;
+  display: block;
+  background: #006373;
+  border-radius: 9px;
+}
+[data-expanding-isi] [data-expandable-content] {
+  transition: height 0.25s ease-in;
+  position: absolute;
+  overflow: hidden;
+  left: 27.5px;
+  top: 30px;
+  width: 975px;
+  box-sizing: border-box;
+  height: 180px;
+  background: none;
+}
+[data-expanding-isi] .isi-full {
+  background-image: url(../../shared/img/isi-full.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  position: relative;
+  background-size: contain;
+  height: 815px;
+  width: 955px;
+}
+[data-expanding-isi] [data-toggle-expand-isi] {
+  background-image: url('../../shared/img/isi-expand.png');
+  background-size: 70px 8px;
+  background-repeat: no-repeat;
+  background-position: 8px 15px;
+  right: 0;
+  top: 0;
+  width: 100px;
+  height: 50px;
+}
+.victoza-loe [data-expanding-isi] .isi-full {
+  height: 408.5px;
+  width: 953px;
+}
+.victoza-loe [data-expanding-isi].is-expanded {
+  top: 265px;
+}
+.victoza-loe [data-expanding-isi].is-expanded .iScrollVerticalScrollbar {
+  display: none;
+}
+.victoza-loe [data-expanding-isi] .btn-victoza-pi {
+  width: 110px;
+  height: 50px;
+  top: 365px;
+  left: 410px;
+}
+.home [data-expanding-isi] {
+  top: 498px;
+}
+.home [data-expanding-isi] [data-expandable-content] {
+  height: 185px;
+}
+.home [data-expanding-isi] .iScrollVerticalScrollbar {
+  height: 160px;
+}
+[data-expanding-isi].is-expanded {
+  top: 50px;
+}
+[data-expanding-isi].is-expanded .iScrollVerticalScrollbar {
+  height: 603px;
+}
+[data-expanding-isi].is-expanded .iScrollVerticalScrollbar .iScrollIndicator {
+  height: 281px;
+}
+[data-expanding-isi].is-expanded .iScrollVerticalScrollbar .iScrollIndicator::after {
+  height: 277px;
+}
+[data-expanding-isi].is-expanded [data-expandable-content] {
+  height: 641px;
+}
+[data-expanding-isi].is-expanded [data-toggle-expand-isi] {
+  background-image: url('../../shared/img/isi-collapse.png');
+}
