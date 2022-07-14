@@ -1,0 +1,62 @@
+.actions-table tr {
+  height: 28px;
+}
+.table-striped.actions-table tr:nth-child(1),
+.table-striped.actions-table tr:nth-child(2),
+.table-striped.actions-table tr:nth-child(3) {
+  background: transparent;
+}
+.table-striped.actions-table th {
+  background: #cb0d89;
+  color: #ffffff;
+}
+.table-striped.actions-table tr:nth-child(1) > th {
+  background: transparent;
+  color: #cb0d89;
+}
+.table-striped.actions-table tr:nth-child(2) > th {
+  padding: 10px 3px;
+}
+.table-striped.actions-table tr:nth-child(2) > th:nth-child(1) {
+  background: transparent;
+}
+.table-striped.actions-table td {
+  border-right: 2px solid #ffffff;
+}
+.table-striped.actions-table td:last-child {
+  border-right: none;
+}
+.table-striped.actions-table tr td:nth-child(1),
+.table-striped.actions-table tr:nth-child(2) th:nth-child(2),
+.table-striped.actions-table tr td:nth-child(5) {
+  border-right: 8px solid #ffffff;
+}
+.table-striped.actions-table td.main-condition {
+  background: #ccc5bd;
+  font-weight: bold;
+  padding-left: 10px;
+}
+.table-striped.actions-table td.sub-condition {
+  background: #eae7e4;
+  font-weight: bold;
+  padding-left: 20px;
+}
+.table-striped.actions-table td.comorbidity {
+  background: #eae7e4;
+  padding-left: 30px;
+}
+.table-striped.actions-table td.checked {
+  background: #7ed321;
+  color: #ffffff;
+}
+.table-striped.actions-table td.checked::after {
+  content: '\2713';
+  /*width:20px;*/
+
+  /*height: 20px;*/
+
+  font-size: 14px;
+  /*line-height: 1px;*/
+
+  color: #fff;
+}

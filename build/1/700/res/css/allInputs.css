@@ -1,0 +1,108 @@
+.allInputs_Table {
+  font-size: 12px;
+  font-weight: 400;
+  color: #57595B;
+}
+.allInputs_firstColumn {
+  width: 300px;
+  padding-left: 22px;
+}
+.allInputs_secondColumn {
+  width: 325px;
+  padding-right: 45px;
+}
+.allInputs_thirdColumn {
+  width: 280px;
+}
+/** Can be removed when swap styled select in **/
+.allInputs_thirdColumn select {
+  width: 100%;
+}
+/** End **/
+.allInputs_Title,
+.allInputs_SubTitle {
+  padding: 4px 0;
+  font-weight: normal;
+  color: #5a5a5a;
+}
+.allInputs_Title {
+  font-weight: 700;
+}
+.allInputs_Title.tableRowPadding,
+.allInputs_SubTitle.tableRowPadding {
+  padding-top: 20px;
+}
+.allInputs_leftText {
+  width: 210px;
+}
+.allInputs_leftText.tableRowPadding,
+.allInputsRowPadding {
+  padding-top: 40px;
+  color: #4a4a4a;
+}
+.allInputs_leftText.tableRowPadding,
+.allInputsRowPadding_small {
+  padding-top: 15px;
+  font-weight: 400;
+}
+.allInputs_InputCell input {
+  border: none;
+  width: 54px;
+  padding: 2px 0;
+  font-size: 12px;
+  color: #FFFFFF;
+  text-align: center;
+  background: #2A918B;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+.allInputs_InputCell.noMargin input {
+  margin: 0;
+}
+.allInputs_InputCell.noMargin input[name="annualweightReboundForWegovy"] {
+  margin-top: 20px;
+}
+.allInputs_InputPadding {
+  height: 18px;
+  padding: 6px 0;
+  font-weight: 400;
+}
+.allInputs_CheckboxCell {
+  position: relative;
+}
+.allInputs_CheckboxCell input {
+  text-align: center;
+  border-radius: 4px;
+  opacity: 0;
+  border: 1px solid #2A918B;
+  margin: 6px 10px 6px 9px;
+  width: 16px;
+  height: 16px;
+}
+.allInputs_CheckboxCell input + label {
+  background: #2A918B;
+  opacity: 1;
+  position: absolute;
+  left: 9px;
+  top: 6px;
+  border-radius: 4px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #2A918B;
+  text-align: center;
+  color: transparent;
+}
+.allInputs_CheckboxCell input:checked + label {
+  color: #FFFFFF;
+  background: #2A918B;
+  opacity: 1;
+}
+.allInputs_CheckboxPadding {
+  height: 18px;
+  padding: 4px 0;
+  font-weight: 400;
+}
+.allInputs_Note {
+  color: #4a4a4a;
+  font-size: 10px;
+}

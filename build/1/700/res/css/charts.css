@@ -1,0 +1,109 @@
+/* Chart styles */
+:root {
+  --chart-purple: #cb0d89;
+  --chart-blue: #0092bc;
+  --chart-medium-purple: rgba(203, 13, 137, 0.5);
+  --chart-medium-blue: rgba(0, 146, 188, 0.5);
+  --chart-light-blue: rgba(127, 200, 221, 0.5);
+  --chart-green: #7ed321;
+  --chart-grey: #c1c5c8;
+}
+.chart-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  max-height: 100%;
+  height: 100%;
+  width: 100%;
+}
+.graphHolder,
+.Gplaceholder {
+  position: relative;
+}
+.chart-legend {
+  position: absolute;
+  left: -215px;
+  bottom: 10px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: right;
+}
+.detailedResults_graphHolder div.chart-legend {
+  left: -360px;
+  text-align: right;
+}
+.chart-legend h4,
+.chart-legend ul {
+  margin: 0;
+}
+.chart-legend ul {
+  position: relative;
+  right: 15px;
+}
+.chart-legend li {
+  list-style: none;
+  margin-top: 9px;
+  position: relative;
+}
+.chart-legend li::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+}
+.chart-legend li.chart-purple::after {
+  background-color: var(--chart-purple);
+}
+.chart-legend li.chart-medium-purple::after {
+  background-color: var(--chart-medium-purple);
+}
+.chart-legend li.chart-blue::after {
+  background-color: var(--chart-blue);
+}
+.chart-legend li.chart-medium-blue::after {
+  background-color: var(--chart-medium-blue);
+}
+.chart-legend li.chart-light-blue::after {
+  background-color: var(--chart-light-blue);
+}
+.chart-legend li.chart-green::after {
+  background-color: var(--chart-green);
+}
+.chart-legend li.chart-grey::after {
+  background-color: var(--chart-grey);
+}
+.chart-ROI-display,
+.table-ROI-display,
+.ROI-display {
+  background-color: #ccc;
+  border: 1px solid #72C3DA;
+  color: #fff;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 10px;
+  padding: 2px 20px;
+}
+.chart-ROI-display,
+.ROI-display {
+  width: 305px;
+}
+.chart-ROI-display div:nth-of-type(2),
+.ROI-display div:nth-of-type(2) {
+  font-size: 15px;
+}
+.table-ROI-display {
+  position: relative;
+  right: -375px;
+  margin-top: 15px;
+  width: 265px;
+}
